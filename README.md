@@ -4,7 +4,7 @@
 All cyberpunk 2077 cloud players do not have access to item crafting mods. With this clicker you can easily create items without your participation.
 
 ### Features
-* Perform auto hold click left mouse click. (crafting)
+* Perform auto hold click left mouse button. (crafting)
 * Perform auto hold click z and x key. (removing items)
 * Input a limited number of click.
 * Input key hold time.
