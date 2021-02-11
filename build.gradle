@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'org.beryx.jlink' version '2.23.3'
+}
+
+group 'pl.kubaretip'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+targetCompatibility = "11"
+sourceCompatibility = "11"
+
+application {
+    mainClassName = 'pl.kubaretip.Start'
+    applicationName = 'Cyperpunk-crafting-clicker'
+}
+
+
+javafx {
+    version = 13
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+
+dependencies {
+    compile group: 'com.1stleg', name: 'jnativehook', version: '2.1.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+jlink {
+    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
+}
+
+test {
+    useJUnitPlatform()
+}

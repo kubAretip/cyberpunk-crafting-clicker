@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="container" alignment="CENTER" prefHeight="255.0" prefWidth="320.0" spacing="12.0"
+      xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="pl.kubaretip.controller.WindowController">
+    <children>
+        <Label text="Auto-hold clicker">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <VBox alignment="CENTER_LEFT" spacing="12.0">
+            <children>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label text="Hold time">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                        </Label>
+                        <Spinner fx:id="keyHoldTimeSpinner" prefHeight="25.0" prefWidth="96.0">
+                            <HBox.margin>
+                                <Insets left="24.0" right="24.0"/>
+                            </HBox.margin>
+                        </Spinner>
+                        <Label text="ms">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Label text="Repeat">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <Spinner fx:id="repeatQuantitySpinner" prefHeight="25.0" prefWidth="96.0">
+                            <HBox.margin>
+                                <Insets left="24.0" right="24.0"/>
+                            </HBox.margin>
+                        </Spinner>
+                        <Label text="times">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Simulated key">
+                            <font>
+                                <Font size="14.0"/>
+                            </font>
+                        </Label>
+                        <ChoiceBox fx:id="selectKey" prefWidth="180.0">
+                            <HBox.margin>
+                                <Insets left="24.0"/>
+                            </HBox.margin>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Button mnemonicParsing="false" onAction="#onActionSaveSettingsButton" prefHeight="26.0" prefWidth="153.0"
+                text="Save &amp; enable hotkeys"/>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label text="Hotkeys"/>
+                <HBox alignment="CENTER" spacing="64.0">
+                    <children>
+                        <Label fx:id="startLabel" text="F2 start" textFill="RED">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                        <Label text="F3 stop" textFill="RED">
+                            <font>
+                                <Font size="24.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+    <padding>
+        <Insets bottom="12.0" left="12.0" right="12.0" top="12.0"/>
+    </padding>
+</VBox>
