@@ -55,7 +55,7 @@ public class WindowController implements Initializable, NativeKeyListener {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         repeatQuantitySpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(1, Integer.MAX_VALUE, 100));
-        keyHoldTimeSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, 1500));
+        keyHoldTimeSpinner.setValueFactory(new SpinnerValueFactory.IntegerSpinnerValueFactory(0, Integer.MAX_VALUE, 1000));
         selectKey.setItems(FXCollections.observableArrayList(Arrays.stream(SupportedKeys.values())
                 .map(SupportedKeys::getName)
                 .collect(Collectors.toList())));
@@ -98,7 +98,7 @@ public class WindowController implements Initializable, NativeKeyListener {
     private void simulateMousePress() {
         robot.mousePress(selectedKey.getEvent());
         robot.delay(keyHoldTime);
-        robot.mousePress(selectedKey.getEvent());
+        robot.mouseRelease(selectedKey.getEvent());
     }
 
     public void maximize() {

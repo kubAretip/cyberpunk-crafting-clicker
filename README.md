@@ -11,7 +11,7 @@ All cyberpunk 2077 cloud players do not have access to item crafting mods. With 
 * Enable/disable clicking with F2/F3 key
 
 ### Additional info
-For crafting item the the best hold time (in Geforce NOW) is ~1500 ms and for deleting item is ~1100ms.
+For crafting and destroing item the the best hold time (in Geforce NOW) is ~1000 ms.
 100% working in Windows 10 and Geforce NOW applicaiton.
 
 ### Download
